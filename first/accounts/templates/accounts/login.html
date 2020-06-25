@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<h1>Welcome</h1>
+<p>hi there </p>
+<form method="post" action=views.call>
+{% csrf_token %}
+Your query: 
+<input type="text" name="q">
+<button class="btn btn-default" type="submit">Ask</button>
+</form>
+</div>
+{% endblock %}
